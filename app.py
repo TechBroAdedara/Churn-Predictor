@@ -17,11 +17,6 @@ def main():
         
     st.subheader("Please input the details of your customer in the respective sections", divider="rainbow")
 
-    #demographic data selection
-    st.subheader("Demographic Data")
-    dependent = st.selectbox("Dependent:", ("Yes", "No"))
-    seniorcitizen = st.selectbox("Senior Citizen:", ("Yes", "No"))
-
     #Payment Method Selection
     st.subheader("Payment")
     PaymentMethod = st.selectbox("Payment Method:", ('Electronic check', 
@@ -47,8 +42,6 @@ def main():
     totalcharges = st.number_input('The total amount charged to the customer',min_value=0, max_value=10000, value=0)
 
     data = {
-                'SeniorCitizen': seniorcitizen,
-                'Dependents': dependent,
                 'tenure':tenure,
                 'PhoneService': PhoneService,
                 'MultipleLines': MultipleLines,
